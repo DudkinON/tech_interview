@@ -14,3 +14,9 @@ def question1(s, t):
             count += 1
 
     return count == len(anagram_list)
+
+
+if __name__ == '__main__':
+    result = question1(raw_input("input first string: "),
+                       raw_input("input second string: "))
+    print "Second string is a substring of first string: ", result
