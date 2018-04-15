@@ -10,7 +10,12 @@ def kruskal(sets, edges):
     graph = {}
 
     def find_set(key):
+        """
+        Find key in sets and return index
 
+        :param key: str
+        :return: int
+        """
         for i in xrange(len(sets)):
             if key in sets[i]:
                 return i
