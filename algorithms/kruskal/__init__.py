@@ -21,6 +21,13 @@ def kruskal(sets, edges):
                 return i
         return -1
 
+    def union(less, more, edge):
+
+        sets[less] = set.union(sets[less], sets[more])
+        sets.pop(more)
+        add_edge(edge[1], (edge[2], edge[0]))
+        add_edge(edge[2], (edge[1], edge[0]))
+
     for edge in edges:
 
         # if there is only one spanning tree left, break the loop
