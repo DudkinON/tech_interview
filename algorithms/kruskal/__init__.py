@@ -22,6 +22,20 @@ def kruskal(sets, edges):
         return -1
 
     def union(less, more, edge):
+        """
+        Union of two sets by indexes, in set with min index,
+        then remove set with max index. Then append the edge
+        in _edges which contains edges for a minimum spanning
+        tree.
+
+        :args:
+            less: A min int
+            more: A max int
+            edge:
+                A list like [5, 'B', 'C'] where 5 is a value
+                of edge 'B', and 'C' are vertices
+        :return: void
+        """
 
         sets[less] = set.union(sets[less], sets[more])
         sets.pop(more)
