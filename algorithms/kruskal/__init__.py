@@ -1,4 +1,12 @@
 def kruskal(sets, edges):
+    """
+    Create a minimum spanning tree
+
+    :args:
+        set: dict
+        edges: list
+    :return: dict
+    """
     graph = {}
 
     for edge in edges:
