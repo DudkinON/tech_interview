@@ -43,7 +43,17 @@ def kruskal(sets, edges):
         add_edge(edge[2], (edge[1], edge[0]))
 
     def add_edge(key, body):
+        """
+        Add an edge to the graph. If the vertex has one edge, append
+        a new one, or else create a list with one edge.
 
+        :args
+            key: A str like 'A'
+            body:
+                A tuple like ('A', 5) where 'A' is a vertex 5
+                is a value of edge
+        :return: void
+        """
         if key in graph:
             graph[key].append(body)
         else:
