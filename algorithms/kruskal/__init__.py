@@ -9,6 +9,13 @@ def kruskal(sets, edges):
     """
     graph = {}
 
+    def find_set(key):
+
+        for i in xrange(len(sets)):
+            if key in sets[i]:
+                return i
+        return -1
+
     for edge in edges:
 
         # if there is only one spanning tree left, break the loop
