@@ -42,6 +42,13 @@ def kruskal(sets, edges):
         add_edge(edge[1], (edge[2], edge[0]))
         add_edge(edge[2], (edge[1], edge[0]))
 
+    def add_edge(key, body):
+
+        if key in graph:
+            graph[key].append(body)
+        else:
+            graph[key] = [body]
+
     for edge in edges:
 
         # if there is only one spanning tree left, break the loop
