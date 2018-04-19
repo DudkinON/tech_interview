@@ -43,3 +43,12 @@ class BST(object):
             else:
                 return self.search_helper(current.left, find_val)
         return False
+
+    def pre_order(self, node, target):
+        if node:
+            if node.value == target:
+                return True
+            else:
+                return (self.pre_order(node.left, target) or
+                        self.pre_order(node.right, target))
+        return False
