@@ -24,3 +24,9 @@ class BST(object):
                 self.insert_helper(current.left, new_val)
             else:
                 current.left = Node(new_val)
+
+    def add(self, node):
+        if self.root.value < node.root.value:
+            self.root.right = node.root
+        else:
+            self.root.left = node.root
