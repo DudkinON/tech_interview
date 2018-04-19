@@ -40,6 +40,12 @@ class BST(object):
                 current.left = Node(new_val)
 
     def add(self, node):
+        """
+        Merge binary tree with the current binary tree
+
+        :param node: An object of Node class
+        :return: void
+        """
         if self.root.value < node.root.value:
             self.root.right = node.root
         else:
