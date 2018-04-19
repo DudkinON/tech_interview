@@ -11,6 +11,12 @@ class BST(object):
         self.current_parent = self.root
 
     def insert(self, new_val):
+        """
+        Insert an integer to binary tree
+
+        :param new_val: An integer
+        :return: void
+        """
         self.insert_helper(self.root, new_val)
 
     def insert_helper(self, current, new_val):
