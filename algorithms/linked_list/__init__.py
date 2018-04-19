@@ -15,3 +15,15 @@ class List(object):
         self.end.next = Node(number)
         self.end = self.end.next
         self.length += 1
+
+    def next(self):
+        try:
+            if self.current.data == self.root.data:
+                self.current = self.current.next
+                return self.root.data
+            else:
+                data = self.current.data
+                self.current = self.current.next
+                return data
+        except AttributeError:
+            return None
