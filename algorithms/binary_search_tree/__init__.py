@@ -20,6 +20,14 @@ class BST(object):
         self.insert_helper(self.root, new_val)
 
     def insert_helper(self, current, new_val):
+        """
+            Using recursion detect place for an integer in binary tree and
+            insert it
+
+        :param current: An object of class Node
+        :param new_val: An integer
+        :return: void
+        """
         if current.value < new_val:
             if current.right:
                 self.insert_helper(current.right, new_val)
