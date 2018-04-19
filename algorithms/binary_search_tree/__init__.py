@@ -61,6 +61,13 @@ class BST(object):
         return self.search_helper(self.root, find_val)
 
     def search_helper(self, current, find_val):
+        """
+        Using recursion search an integer in binary tree
+
+        :param current: An object of Node class
+        :param find_val: An integer
+        :return: Boolean
+        """
         if current:
             if current.value == find_val:
                 return True
