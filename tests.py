@@ -3,6 +3,7 @@ from question1 import question1
 from question2 import question2
 from question3 import question3
 from question4 import question4
+from question5 import question5, List
 
 
 class TestSolutions(TestCase):
@@ -49,3 +50,14 @@ class TestSolutions(TestCase):
                   [1, 0, 0, 0, 1],
                   [0, 0, 0, 0, 0]]
         self.assertEquals(3, question4(matrix, 3, 1, 4))
+
+    def test_question5(self):
+        linked_list = List(2)
+        linked_list.insert(4)
+        linked_list.insert(3)
+        linked_list.insert(6)
+        linked_list.insert(9)
+        linked_list.insert(0)
+        self.assertEquals(6, question5(linked_list, 3))
+        self.assertEquals(None, question5('linked_list', 2))
+        self.assertEquals(None, question5(linked_list, None))
