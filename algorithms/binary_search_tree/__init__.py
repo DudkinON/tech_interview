@@ -107,4 +107,11 @@ class BST(object):
                 return self.search_parent_helper(n1, n2, node.left)
 
     def search_parent(self, n1, n2):
+        """
+        Look for the least common parent
+
+        :param n1: An integer
+        :param n2: An integer
+        :return: An integer
+        """
         return self.search_parent_helper(n1, n2, self.root)
