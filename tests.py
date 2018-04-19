@@ -2,6 +2,7 @@ from unittest import TestCase
 from question1 import question1
 from question2 import question2
 from question3 import question3
+from question4 import question4
 
 
 class TestSolutions(TestCase):
@@ -40,3 +41,11 @@ class TestSolutions(TestCase):
                        'F': [('E', 1), ('G', 8)],
                        'G': [('D', 6), ('F', 8), ('H', 2)], 'H': [('G', 2)]})
         )
+
+    def test_question4(self):
+        matrix = [[0, 1, 0, 0, 0],
+                  [0, 0, 0, 0, 0],
+                  [0, 0, 0, 0, 0],
+                  [1, 0, 0, 0, 1],
+                  [0, 0, 0, 0, 0]]
+        self.assertEquals(3, question4(matrix, 3, 1, 4))
