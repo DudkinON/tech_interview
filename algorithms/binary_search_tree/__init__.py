@@ -78,6 +78,15 @@ class BST(object):
         return False
 
     def search_parent_helper(self, n1, n2, node):
+        """
+            Search the least common ancestor between two nodes on a binary
+            search tree
+
+        :param n1: An integer
+        :param n2: An integer
+        :param node: An object of Node class
+        :return: An integer
+        """
         if node:
             if node.value == n1 or node.value == n2:
                 return node.value
