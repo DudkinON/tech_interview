@@ -72,3 +72,6 @@ class BST(object):
                 return self.search_parent_helper(n1, n2, node.right)
             elif node.right is None:
                 return self.search_parent_helper(n1, n2, node.left)
+
+    def search_parent(self, n1, n2):
+        return self.search_parent_helper(n1, n2, self.root)
