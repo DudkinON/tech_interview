@@ -52,6 +52,12 @@ class BST(object):
             self.root.left = node.root
 
     def search(self, find_val):
+        """
+        Search the integer in binary tree
+
+        :param find_val: An integer
+        :return: result of search_helper method
+        """
         return self.search_helper(self.root, find_val)
 
     def search_helper(self, current, find_val):
