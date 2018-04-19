@@ -30,3 +30,6 @@ class BST(object):
             self.root.right = node.root
         else:
             self.root.left = node.root
+
+    def search(self, find_val):
+        return self.search_helper(self.root, find_val)
